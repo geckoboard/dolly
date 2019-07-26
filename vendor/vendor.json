@@ -1,0 +1,97 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "A7uq8KHa/CWnYRanH6TKb4B1GH8=",
+			"path": "github.com/bugsnag/bugsnag-go",
+			"revision": "3b0dbb79d7cc36c982e6ba70ceb76771552434f6",
+			"revisionTime": "2019-07-11T12:50:18Z"
+		},
+		{
+			"checksumSHA1": "GZA2goqIcDeQIU/Ae30N09UdlVM=",
+			"path": "github.com/bugsnag/bugsnag-go/device",
+			"revision": "3b0dbb79d7cc36c982e6ba70ceb76771552434f6",
+			"revisionTime": "2019-07-11T12:50:18Z"
+		},
+		{
+			"checksumSHA1": "M34Z900ntGlIegOmR5qcb/b3th0=",
+			"path": "github.com/bugsnag/bugsnag-go/errors",
+			"revision": "3b0dbb79d7cc36c982e6ba70ceb76771552434f6",
+			"revisionTime": "2019-07-11T12:50:18Z"
+		},
+		{
+			"checksumSHA1": "EL2tYuD17f93mSGmxz3qBO2dnqY=",
+			"path": "github.com/bugsnag/bugsnag-go/headers",
+			"revision": "3b0dbb79d7cc36c982e6ba70ceb76771552434f6",
+			"revisionTime": "2019-07-11T12:50:18Z"
+		},
+		{
+			"checksumSHA1": "s2JCY9dZJnKygX1vb0kWFLdgJlU=",
+			"path": "github.com/bugsnag/bugsnag-go/sessions",
+			"revision": "3b0dbb79d7cc36c982e6ba70ceb76771552434f6",
+			"revisionTime": "2019-07-11T12:50:18Z"
+		},
+		{
+			"checksumSHA1": "1/5Kvmo8NX2xtAIHAY3N+AwMRAI=",
+			"path": "github.com/bugsnag/panicwrap",
+			"revision": "1d162ee1264c75b29b0f7733221bedfae7559079",
+			"revisionTime": "2018-05-10T05:15:41Z"
+		},
+		{
+			"checksumSHA1": "CSPbwbyzqA6sfORicn4HFtIhF/c=",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "d8f796af33cc11cb798c1aaeb27a4ebc5099927d",
+			"revisionTime": "2018-08-30T19:11:22Z"
+		},
+		{
+			"checksumSHA1": "CSpFFolK9A8mxnVhlnM1Iue5klY=",
+			"path": "github.com/geckoboard/slackutil-go/interactivity",
+			"revision": "004c645cb30e428444ffe5b1f8667dd80cfcee21",
+			"revisionTime": "2019-07-26T10:07:00Z"
+		},
+		{
+			"checksumSHA1": "KJ279CsGavQ8/sY86Z6RrHQQejc=",
+			"path": "github.com/geckoboard/slackutil-go/messaging",
+			"revision": "004c645cb30e428444ffe5b1f8667dd80cfcee21",
+			"revisionTime": "2019-07-26T10:07:00Z"
+		},
+		{
+			"checksumSHA1": "6xR3cokm+LiV9u7Jjp3kEqGeYs4=",
+			"path": "github.com/geckoboard/slackutil-go/slashcommand",
+			"revision": "004c645cb30e428444ffe5b1f8667dd80cfcee21",
+			"revisionTime": "2019-07-26T10:07:00Z"
+		},
+		{
+			"checksumSHA1": "QXv1taKoGPfsWnqBnPOoGPRgGg0=",
+			"path": "github.com/geckoboard/slash-infra/slackutil",
+			"revision": "785b0b90aa75770ec685de78f948aa485b0d673f",
+			"revisionTime": "2019-04-04T13:29:36Z"
+		},
+		{
+			"checksumSHA1": "s9C2MKOjpuvhfEIfoG6U9/DdMZ4=",
+			"path": "github.com/gofrs/uuid",
+			"revision": "abfe1881e60ef34074c1b8d8c63b42565c356ed6",
+			"revisionTime": "2019-05-10T20:42:58Z"
+		},
+		{
+			"checksumSHA1": "wwEGs3bPrm/zZT0o9gkQ3cJsNu8=",
+			"path": "github.com/joho/godotenv",
+			"revision": "5c0e6c6ab1a0a9ef0a8822cba3a05d62f7dad941",
+			"revisionTime": "2019-02-04T04:41:09Z"
+		},
+		{
+			"checksumSHA1": "z/DzcKNumSHzzxg9Widbi9KgwNw=",
+			"path": "github.com/julienschmidt/httprouter",
+			"revision": "26a05976f9bf5c3aa992cc20e8588c359418ee58",
+			"revisionTime": "2018-10-21T22:38:31Z"
+		},
+		{
+			"checksumSHA1": "1dbdS+ADojoCJS8oY8pVJs3say0=",
+			"path": "github.com/kardianos/osext",
+			"revision": "2bc1f35cddc0cc527b4bc3dce8578fc2a6c11384",
+			"revisionTime": "2019-02-22T17:33:26Z"
+		}
+	],
+	"rootPath": "github.com/geckoboard/dolly"
+}

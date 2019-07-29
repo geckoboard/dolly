@@ -9,6 +9,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
+var SyrupBaseURL string
+
 func main() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Llongfile)
 
@@ -26,5 +28,15 @@ func main() {
 		port = "8090"
 	}
 
-	log.Fatal(http.ListenAndServe(":"+port, handler))
+	SyrupBaseURL = os.Getenv("SYRUP_BASE_URL")
+	if SyrupBaseURL == "" {
+		SyrupBaseURL = "http://localhost:8000"
+	}
+
+	loggingMiddleware := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		log.Println(r.Method, r.URL.Path, r.RemoteAddr, r.UserAgent())
+
+		handler.ServeHTTP(w, r)
+	})
+	log.Fatal(http.ListenAndServe(":"+port, loggingMiddleware))
 }

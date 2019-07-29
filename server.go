@@ -2,7 +2,10 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"net/http"
+	"net/url"
+	"path"
 
 	"github.com/geckoboard/slackutil-go/interactivity"
 	"github.com/geckoboard/slackutil-go/messaging"
@@ -15,8 +18,13 @@ const SelectPresetActionID = "choose_preset"
 const SelectPresetBlockID = "preset_dropdown"
 
 var presets = []preset{
-	{"entire room", "0"},
-	{"whiteboard", "1"},
+	{"off position", "0"},
+	{"whole room", "1"},
+	{"whiteboard", "2"},
+	{"presenters", "3"},
+	{"Ben", "4"},
+	{"position 5", "5"},
+	{"position 6", "6"},
 }
 
 type preset struct {
@@ -80,8 +88,24 @@ func selectCallback(req interactivity.Request, resp interactivity.MessageRespond
 
 		desiredPreset := action.SelectedOption.Value
 
-		http.Post("http://192.168.40.108:8000/presets/"+desiredPreset+"/recall", "application/json", nil)
+		u, err := url.Parse(SyrupBaseURL)
+		if err != nil {
+			resp.EphemeralResponse(messaging.CommonPayload{
+				Text: fmt.Sprintf("bad syrup url: %q", err),
+			})
+			return
+		}
+
+		u.Path = path.Join("presets", desiredPreset, "recall")
+		http.Post(u.String(), "application/json", nil)
+
+		// TODO: errors lol
+		return
 	}
+
+	resp.EphemeralResponse(messaging.CommonPayload{
+		Text: "could not handle interaction",
+	})
 }
 
 func (h httpServer) slashCamera(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {

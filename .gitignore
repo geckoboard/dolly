@@ -13,3 +13,4 @@
 
 # local config settings
 .env
+bin

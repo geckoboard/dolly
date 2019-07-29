@@ -117,7 +117,7 @@ func (h httpServer) slashCamera(w http.ResponseWriter, r *http.Request, ps httpr
 
 	slashCamera := slashcommand.DelayedSlashResponse{
 		Handler: func(ctx context.Context, req slashcommand.SlashCommandRequest, resp slashcommand.MessageResponder) {
-			resp.PublicResponse(messaging.CommonPayload{
+			resp.EphemeralResponse(messaging.CommonPayload{
 				Blocks: []messaging.Block{makePresetPrompt()},
 			})
 
